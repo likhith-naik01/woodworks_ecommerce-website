@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="seller-dashboard">
+        <h1>Add New Product</h1>
+        <form id="productForm">
+            <input type="text" id="productName" placeholder="Product Name" required>
+            <textarea id="productDescription" placeholder="Description" required></textarea>
+            <input type="number" id="productPrice" placeholder="Price" step="0.01" required>
+            <input type="file" id="productImage" accept="image/*" required>
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+
+    <script src="seller.js"></script>
+</body>
+</html>

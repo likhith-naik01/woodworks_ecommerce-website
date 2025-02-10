@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoodWorks - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+           <!-- Add this to your HTML (inside <body>) -->
+<div class="hamburger-menu-overlay" id="menuOverlay">
+    <div class="menu-content">
+        <span class="close-btn" onclick="closeMenu()">&times;</span>
+        <h3>WoodWorks Menu</h3>
+        <ul class="menu-items">
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-th-large"></i> Categories</a></li>
+            <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+            <li><a href="#"><i class="fas fa-comment"></i> Feedback</a></li>
+            <li><a href="#"><i class="fas fa-file-alt"></i> Privacy Policy</a></li>
+            <li><a href="#"><i class="fas fa-handshake"></i> Terms of Service</a></li>
+        </ul>
+    </div>
+</div>
+<div class="hamburger-icon">☰</div>
+<div class="hamburger-menu-overlay" id="menuOverlay"></div>
+
+
+<!-- Update your hamburger icon in header -->
+<!-- <div class="hamburger-icon" onclick="openMenu()">☰</div> -->
+</section>
+        <!-- <div class="hamburger-menu" onclick="toggleMenu()">☰</div> -->
+        <div class="logo">WoodWorks</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="profile-icon" onclick="toggleProfile()">
+            <i class="fas fa-user"></i>
+            <div class="profile-dropdown" id="profileDropdown">
+                <a href="#" onclick="showLoginForm()">Seller Login</a>
+                <a href="#">My Orders</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Navigation -->
+    <!-- <nav class="categories">
+        <a href="#">Sofas</a>
+        <a href="#">Chairs</a>
+        <a href="#">Tables</a>
+        <a href="#">Beds</a>
+    </nav> -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://via.placeholder.com/1500x400" alt="Hero Banner">
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="products-grid">
+            <!-- Product cards will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Instagram Button (Fixed) -->
+    <a href="https://instagram.com/your_instagram" target="_blank" class="instagram-btn">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://wa.me/your_whatsapp_number" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+
+    <!-- Seller Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginForm()">&times;</span>
+            <h2>Seller Login</h2>
+            <form id="sellerLoginForm">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update the Featured Products Section in index.html -->
+<section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="products-list">
+        <!-- Product 1 -->
+        <div class="product-row">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/300x200" alt="Product 1">
+            </div>
+            <div class="product-details">
+                <h3>Premium Wooden Sofa</h3>
+                <p class="price">$499.99</p>
+                <p class="description">Handcrafted teak wood sofa with premium upholstery. Available in 3 colors.</p>
+                <div class="product-actions">
+                    <button class="btn-cart">Add to Cart</button>
+                    <button class="btn-whatsapp" onclick="buyOnWhatsApp('Premium Wooden Sofa', 499.99)">
+                        <i class="fab fa-whatsapp"></i> Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat similar structure for 4 more products -->
+        <!-- Product 2 -->
+        <div class="product-row">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/300x200" alt="Product 2">
+            </div>
+            <div class="product-details">
+                <h3>Modern Dining Chair</h3>
+                <p class="price">$149.99</p>
+                <p class="description">Ergonomic design with oak wood finish. Set of 4 available.</p>
+                <div class="product-actions">
+                    <button class="btn-cart">Add to Cart</button>
+                    <button class="btn-whatsapp" onclick="buyOnWhatsApp('Modern Dining Chair', 149.99)">
+                        <i class="fab fa-whatsapp"></i> Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add 3 more product rows following the same pattern -->
+    </div>
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginForm()">&times;</span>
+            <h2>Seller Login</h2>
+            <form id="sellerLoginForm">
+                <input type="text" id="sellerUsername" placeholder="Username" required>
+                <input type="password" id="sellerPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+ 
+      
+    <script src="script.js"></script>
+</body>
+</html>
